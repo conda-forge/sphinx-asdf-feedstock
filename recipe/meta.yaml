@@ -22,9 +22,10 @@ requirements:
   run:
     - python >=3.6
     - pyyaml
+    - jinja2
+    - docutils
     - mistune
     - sphinx
-    - sphinx_bootstrap_theme
 
 test:
   imports:
