@@ -1,17 +1,17 @@
 {% set name = "sphinx-asdf" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 82a21a6a3828890cfeaf3e1719b02e188c325467614f5be33b4e73789e8bb42c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 926c881b2492b6cdfd1ad40cbea63d6f21825b075259b8860aa954f86f269dbe
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -22,21 +22,22 @@ requirements:
   run:
     - python >=3.6
     - pyyaml
-    - mistune
+    - jinja2
+    - docutils
+    - mistune <2
     - sphinx
-    - sphinx_bootstrap_theme
 
 test:
   imports:
     - sphinx_asdf
 
 about:
-  home: https://github.com/asdf-format/sphinx-asdf 
+  home: https://github.com/asdf-format/sphinx-asdf
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "Sphinx plugin for generating documentation from ASDF schemas"
-  doc_url: https://github.com/asdf-format/sphinx-asdf 
+  summary: Sphinx plugin for generating documentation from ASDF schemas
+  doc_url: https://github.com/asdf-format/sphinx-asdf
   dev_url: https://github.com/asdf-format/sphinx-asdf
 
 extra:
