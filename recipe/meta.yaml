@@ -24,7 +24,7 @@ requirements:
     - pyyaml
     - jinja2
     - docutils
-    - mistune
+    - mistune <2
     - sphinx
 
 test:
