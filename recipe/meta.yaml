@@ -33,6 +33,7 @@ requirements:
     - sphinx-rtd-theme
     - sphinx-inline-tabs
     - toml
+    - python >=3.6
 
 test:
   imports:
