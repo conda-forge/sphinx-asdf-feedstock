@@ -30,7 +30,7 @@ requirements:
     - sphinx
     - sphinx-astropy
     - sphinx_bootstrap_theme
-    - sphinx-rtd-theme
+    - sphinx_rtd_theme
     - sphinx-inline-tabs
     - toml
     - python >=3.6
