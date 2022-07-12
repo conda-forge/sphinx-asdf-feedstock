@@ -20,12 +20,19 @@ requirements:
     - python >=3.6
     - setuptools_scm
   run:
-    - python >=3.6
-    - pyyaml
-    - jinja2
+    - asdf
+    - astropy>=5.0.4
     - docutils
-    - mistune <2
+    - graphviz
+    - matplotlib
+    - myst-parser
+    - mistune~=0.8.4
     - sphinx
+    - sphinx-astropy
+    - sphinx_bootstrap_theme
+    - sphinx-rtd-theme
+    - sphinx-inline-tabs
+    - toml
 
 test:
   imports:
