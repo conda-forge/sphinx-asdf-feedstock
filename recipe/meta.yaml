@@ -1,5 +1,5 @@
 {% set name = "sphinx-asdf" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4f79db5412d7d1cd2649ce5fa42160e54942758beba2de30605a74f12a23365c
+  sha256: d133be7ba817a4ea81337a7d9541faf985b80d6706a2ad2c981dec5cececa00a
 
 build:
   number: 0
