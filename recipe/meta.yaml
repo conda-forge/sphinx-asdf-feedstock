@@ -1,5 +1,5 @@
 {% set name = "sphinx-asdf" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4f79db5412d7d1cd2649ce5fa42160e54942758beba2de30605a74f12a23365c
+  sha256: 50c097b3a642d9f9fc8dad5947e35130e36718896fa64dd1eeafd175527609f5
 
 build:
   number: 0
@@ -23,17 +23,14 @@ requirements:
     - asdf
     - astropy >=5.0.4
     - docutils
-    - graphviz
-    - matplotlib-base
-    - myst-parser
-    - mistune ~=0.8.4
+    - mistune >=3
+    - packaging
     - sphinx
     - sphinx-astropy
     - sphinx_bootstrap_theme
-    - sphinx_rtd_theme
-    - sphinx-inline-tabs
+    - sphinx-rtd-theme
     - toml
-    - python >=3.6
+    - python >=3.9
 
 test:
   imports:

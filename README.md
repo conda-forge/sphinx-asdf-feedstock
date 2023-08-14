@@ -1,11 +1,11 @@
-About sphinx-asdf
-=================
+About sphinx-asdf-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-asdf-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/asdf-format/sphinx-asdf
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-asdf-feedstock/blob/main/LICENSE.txt)
 
 Summary: Sphinx plugin for generating documentation from ASDF schemas
 
@@ -147,5 +147,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@WilliamJamieson](https://github.com/WilliamJamieson/)
 * [@marscher](https://github.com/marscher/)
 
