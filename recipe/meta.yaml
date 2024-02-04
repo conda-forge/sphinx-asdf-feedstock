@@ -1,5 +1,5 @@
 {% set name = "sphinx-asdf" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 44b3d4829df90bf2f9d0dadfd6a1fe1522c040842cd3c61ff4717edd85d0860e
+  sha256: 00806edb7c24ca772f1c8ea583d66cb4ac152c98aa1f4580d267f3166e911538
 
 build:
   number: 0
@@ -27,7 +27,6 @@ requirements:
     - packaging
     - sphinx
     - sphinx-astropy
-    - sphinx_bootstrap_theme
     - sphinx-rtd-theme
     - toml
     - python >=3.9
