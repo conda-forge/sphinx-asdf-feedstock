@@ -10,18 +10,19 @@ source:
   sha256: 0576f9747ed956c10ad45e820454bf73531ad0d66840e29fc1c681d1b27e2913
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
   host:
+    - python {{ python_min }}
+    - setuptools
     - pip
-    - python >=3.6
     - setuptools_scm
   run:
     - asdf
-    - astropy >=5.0.4
+    - astropy-base >=5.0.4
     - docutils
     - mistune >=3
     - packaging
@@ -34,6 +35,11 @@ requirements:
 test:
   imports:
     - sphinx_asdf
+  requires:
+    - python {{ python_min }}
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/asdf-format/sphinx-asdf

@@ -148,6 +148,6 @@ Feedstock Maintainers
 =====================
 
 * [@WilliamJamieson](https://github.com/WilliamJamieson/)
-* [@conda-forge/sphinx](https://github.com/conda-forge/sphinx/)
+* [@conda-forge/sphinx](https://github.com/orgs/conda-forge/teams/sphinx/)
 * [@marscher](https://github.com/marscher/)
 
