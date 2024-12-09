@@ -11,13 +11,14 @@ source:
 
 build:
   number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
   host:
+    - python {{ python_min }}
+    - setuptools
     - pip
-    - python >=3.6
     - setuptools_scm
   run:
     - asdf
@@ -34,6 +35,11 @@ requirements:
 test:
   imports:
     - sphinx_asdf
+  requires:
+    - python {{ python_min }}
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/asdf-format/sphinx-asdf
