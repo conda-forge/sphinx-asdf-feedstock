@@ -21,6 +21,7 @@ requirements:
     - pip
     - setuptools_scm
   run:
+    - python >={{ python_min }}
     - asdf
     - astropy-base >=5.0.4
     - docutils
@@ -30,7 +31,6 @@ requirements:
     - sphinx-astropy
     - sphinx-rtd-theme
     - toml
-    - python >=3.9
 
 test:
   imports:
