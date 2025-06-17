@@ -1,16 +1,16 @@
 {% set name = "sphinx-asdf" %}
-{% set version = "0.2.4" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0576f9747ed956c10ad45e820454bf73531ad0d66840e29fc1c681d1b27e2913
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 087f445c4e7cced5075b11e1e2cbde022fe796702930a5711cdbb26f22d3eb37
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
@@ -21,6 +21,7 @@ requirements:
     - pip
     - setuptools_scm
   run:
+    - python >={{ python_min }}
     - asdf
     - astropy-base >=5.0.4
     - docutils
@@ -30,7 +31,6 @@ requirements:
     - sphinx-astropy
     - sphinx-rtd-theme
     - toml
-    - python >=3.9
 
 test:
   imports:
