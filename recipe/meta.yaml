@@ -1,5 +1,5 @@
 {% set name = "sphinx-asdf" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 087f445c4e7cced5075b11e1e2cbde022fe796702930a5711cdbb26f22d3eb37
+  sha256: 7f3472b9e70a8a5d41e8b1de39447967fbceae728f7fc897f7379c3dcfa39ecf
 
 build:
   number: 0
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.11
     - setuptools
     - pip
     - setuptools_scm
   run:
-    - python >={{ python_min }}
+    - python >=3.11
     - asdf
     - astropy-base >=5.0.4
     - docutils
@@ -36,7 +36,7 @@ test:
   imports:
     - sphinx_asdf
   requires:
-    - python {{ python_min }}
+    - python >=3.11
     - pip
   commands:
     - pip check
