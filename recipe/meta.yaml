@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >=3.11
     - setuptools
     - pip
     - setuptools_scm
   run:
-    - python >={{ python_min }}
+    - python >=3.11
     - asdf
     - astropy-base >=5.0.4
     - docutils
@@ -36,7 +36,7 @@ test:
   imports:
     - sphinx_asdf
   requires:
-    - python {{ python_min }}
+    - python >=3.11
     - pip
   commands:
     - pip check
